@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Login — MyAppZone</title>
+<meta name="description" content="Sign in or create a MyAppZone account to open apps.">
+<meta name="theme-color" content="#16A34A">
+<meta name="robots" content="noindex">
+
+<meta property="og:title" content="Login — MyAppZone"><meta property="og:description" content="Sign in or create a MyAppZone account to open apps."><meta property="og:type" content="website"><meta property="og:site_name" content="MyAppZone">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<header id="site-header"></header>
+<main id="main">
+
+<div class="wrap"><div class="formcard">
+ <div id="auth-msg" role="status" aria-live="polite"></div>
+ <p id="why" class="ok" hidden></p>
+ <div id="view"></div>
+</div></div>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/config.js"></script>
+<script src="js/core.js"></script>
+<script>Maz.Auth.ready().then(function(){Maz.chrome("login");});</script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MyAppZone — Discover Amazing Apps</title>
+<meta name="description" content="Explore useful apps and digital tools, all in one place. Open an app or try a live demo.">
+<meta name="theme-color" content="#16A34A">
+
+<link rel="canonical" href="https://www.myappzone.online/">
+<meta property="og:title" content="MyAppZone — Discover Amazing Apps"><meta property="og:description" content="Explore useful apps and digital tools, all in one place. Open an app or try a live demo."><meta property="og:type" content="website"><meta property="og:site_name" content="MyAppZone">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<div id="splash" aria-hidden="true"><div class="in"><img src="assets/logo.svg" alt=""><span>My<b>App</b>Zone</span></div></div><script>try{if(sessionStorage.getItem("maz:splash")||matchMedia("(prefers-reduced-motion: reduce)").matches){document.getElementById("splash").remove()}else{document.body.style.overflow="hidden";sessionStorage.setItem("maz:splash","1");setTimeout(function(){var s=document.getElementById("splash");if(!s)return;s.classList.add("out");document.body.style.overflow="";setTimeout(function(){s.remove()},450)},1400)}}catch(e){var s=document.getElementById("splash");if(s)s.remove()}</script>
+<header id="site-header"></header>
+<main id="main">
+
+<section class="hero"><div class="wrap">
+ <div>
+  <span class="eyebrow"><span class="dot"></span>MyAppZone</span>
+  <h1>Discover Amazing Apps.</h1>
+  <p class="lead">Explore useful apps and digital tools, all in one place.</p>
+  <form class="hero-search" action="apps.html" role="search"><label class="sr" for="q">Search apps</label><input id="q" name="q" type="search" placeholder="Search apps by name or description" autocomplete="off"><button class="btn" type="submit">Search</button></form>
+  <a class="btn out" href="apps.html">Explore Apps</a>
+ </div>
+ <div class="hero-art"><svg viewBox="0 0 360 300" role="img" aria-label="App tiles illustration"><rect x="20" y="30" width="150" height="150" rx="34" fill="#16A34A"/><rect x="190" y="30" width="150" height="110" rx="30" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><rect x="20" y="200" width="150" height="70" rx="26" fill="#fff" stroke="#e5e7eb" stroke-width="2"/><rect x="190" y="160" width="150" height="110" rx="30" fill="#171717"/><circle cx="95" cy="105" r="30" fill="#fff"/><circle cx="305" cy="75" r="14" fill="#DC2626"/><rect x="208" y="60" width="60" height="9" rx="4.5" fill="#d5d8dc"/><rect x="208" y="80" width="40" height="9" rx="4.5" fill="#e5e7eb"/><rect x="40" y="222" width="70" height="9" rx="4.5" fill="#d5d8dc"/><circle cx="265" cy="215" r="24" fill="#16A34A"/><path d="m255 215 7 7 13-14" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+</div></section>
+<section class="s"><div class="wrap">
+ <div class="s-head"><h2>Latest apps</h2><a href="apps.html" class="btn ghost sm" id="all-link" hidden>View all apps</a></div>
+ <div id="list" class="grid" aria-live="polite"></div>
+</div></section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/config.js"></script>
+<script src="js/core.js"></script>
+<script>Maz.Auth.ready().then(function(){Maz.chrome("home");});</script>
+<script src="js/apps-list.js"></script><script>AppsList.init({limit:6,home:true});</script>
+</body>
+</html>
